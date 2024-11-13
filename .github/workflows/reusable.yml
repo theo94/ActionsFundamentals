@@ -5,7 +5,7 @@ on:
       who-to-greet:
         description: 'The person to greet'
         type: string
-        default: "World"
+        default: World
         required: true
     outputs:
       current-time: 
