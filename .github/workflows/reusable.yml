@@ -5,8 +5,11 @@ on:
       who-to-greet: 
         type: string
         default: "World"
+        required: true
     outputs:
-      current-time: ${{ jobs.reusable-job.outputs.current-time }}
+      current-time: 
+        description: ' The time when greeting'
+        value: ${{ jobs.reusable-job.outputs.current-time }}
 jobs:
   reusable-job:
     runs-on: ubuntu-latest
