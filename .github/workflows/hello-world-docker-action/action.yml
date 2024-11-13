@@ -1,17 +1,14 @@
 name: 'Hello World Docker Action'
 description: 'Say hello to the workld'
-on: 
-  workflow_dispatch:
-    inputs: 
-      who-to-greet:
-        description: 'Who to greet'
-        required: true
-        default: 'world'
-
+inputs:
+  who-to-greet:
+    description: "who to greet"
+    required: true
+    default: World
+    type: string
 outputs:
   time:
     description: 'The time we said hello'
-
 runs:
   using: 'docker'
   image: 'DockerFile'
